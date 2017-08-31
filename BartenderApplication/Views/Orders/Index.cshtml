@@ -6,7 +6,9 @@
 
 <h2>@ViewBag.Title</h2>
 
-<table class="table">
+<br />
+
+<table class="table table-striped">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.CocktailName)
@@ -17,20 +19,21 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.CocktailName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OrderedBy)
-        </td>
-        <td>
-            @Html.ActionLink("Change", "Edit", new { id=item.OrderId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.OrderId }) |
-            @Html.ActionLink("Cancel", "Delete", new { id=item.OrderId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CocktailName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderedBy)
+            </td>
+            <td>
+                @Html.ActionLink("Change", "Edit", new { id = item.OrderId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.OrderId }) |
+                @Html.ActionLink("Cancel", "Delete", new { id = item.OrderId })
+            </td>
+        </tr>
+    }
 
 </table>
