@@ -19,8 +19,6 @@ namespace BartenderApplication
         {
         }
 
-        public DbSet<Ingredient> Ingredients { get; set; }
-        public DbSet<Cocktail> Cocktails { get; set; }
         public DbSet<Order> Orders { get; set; }
     }
 }
