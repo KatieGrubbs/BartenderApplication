@@ -7,7 +7,7 @@ namespace BartenderApplication
     using System.Data.Entity;
     using System.Linq;
 
-    public class BartenderDB : DbContext
+    public class BartenderDatabase : DbContext
     {
         // Your context has been configured to use a 'BartenderDB' connection string from your application's 
         // configuration file (App.config or Web.config). By default, this connection string targets the 
@@ -15,7 +15,7 @@ namespace BartenderApplication
         // 
         // If you wish to target a different database and/or database provider, modify the 'BartenderDB' 
         // connection string in the application configuration file.
-        public BartenderDB() : base("name=BartenderDatabase") { }
+        public BartenderDatabase() : base("name=BartenderDatabase") { }
 
         public DbSet<Order> Orders { get; set; }
 
