@@ -1,3 +1,4 @@
+using System.Data.Entity.ModelConfiguration.Conventions;
 using BartenderApplication.Models;
 
 namespace BartenderApplication
@@ -14,11 +15,15 @@ namespace BartenderApplication
         // 
         // If you wish to target a different database and/or database provider, modify the 'BartenderDB' 
         // connection string in the application configuration file.
-        public BartenderDB()
-            : base("name=BartenderDB")
-        {
-        }
+        public BartenderDB() : base("name=BartenderDatabase") { }
 
         public DbSet<Order> Orders { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            // Use singular table names
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
