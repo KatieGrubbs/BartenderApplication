@@ -5,14 +5,14 @@ namespace BartenderApplication.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<BartenderApplication.BartenderDB>
+    internal sealed class Configuration : DbMigrationsConfiguration<BartenderApplication.BartenderDatabase>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(BartenderApplication.BartenderDB context)
+        protected override void Seed(BartenderApplication.BartenderDatabase context)
         {
             //  This method will be called after migrating to the latest version.
 

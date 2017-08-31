@@ -13,7 +13,7 @@ namespace BartenderApplication.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201708280147124_Initial"; }
+            get { return "201708310111470_Initial"; }
         }
         
         string IMigrationMetadata.Source
